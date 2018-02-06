@@ -179,6 +179,7 @@ def user_login(request):
         password = request.POST.get('password')
         # Use Django's machinery to attempt to see if the username/password
         # combination is valid - a User object is returned if it is.
+        
         user = authenticate(username=username, password=password)
         # If we have a User object, the details are correct.
         # If None (Python's way of representing the absence of a value), no user
@@ -196,7 +197,7 @@ def user_login(request):
         else:
             # Bad login details were provided. So we can't log the user in.
             print("Invalid login details: {0}, {1}".format(username, password))
-            return HttpResponse("Incorrect Username or password.")
+            return HttpResponse("Invalid login details supplied. For account name " + username )
     # The request is not a HTTP POST, so display the login form.
     # This scenario would most likely be a HTTP GET.
     else:

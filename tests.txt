@@ -1,1 +1,1 @@
-python run_tests.py -u https://github.com/HerbertMarc/tango_with_django_project -s 2250456h -d 2018-01-CHANGEME
+python run_tests.py -u https://github.com/HerbertMarc/tango_with_django_project -s 2250456h -d 2018-02-06
